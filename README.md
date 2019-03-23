@@ -1,1 +1,3 @@
-# algoritmi_laboratorio
+## Algoritmi Laboratorio
+
+# Tutti gli esercizi di laboratorio
