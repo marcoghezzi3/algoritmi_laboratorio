@@ -44,6 +44,7 @@ int main(int argc, char const *argv[]) {
 }
 
 void *newBook(char **book, int n) {
+  free(book);
   book = calloc(n, sizeof(char*));
   if (book!=NULL);
     //printf("Allocazione effettuata\n");

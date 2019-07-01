@@ -83,11 +83,11 @@ int dequeue(Queue q) {
     return -1;
 }
 
-void destroyqueue(Queue q) {
-  while(q!=NULL) {
-    Queue s = q;
-    free(q);
-    q = s -> next;
+void destroyqueue(Queue *q) {
+  while(*q!=NULL) {
+    Queue s = *q;
+    free(*q);
+    *q = s -> next;
   }
 }
 

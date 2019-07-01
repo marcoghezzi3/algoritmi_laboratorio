@@ -46,6 +46,9 @@ int main(int argc, char const *argv[]) {
   print_heap(new);
   printf("\n");*/
   return 0;
+  swap(a, 1, 2);
+  for(int i = 0; i < 14; i++)
+    printf("%d\n", a[i]);
 }
 
 int father(int i) {
@@ -108,9 +111,9 @@ void pqueue_insert( Pqueue pcoda, Item item ) {
 
 Item pqueue_extractmin(Pqueue pcoda) {
   int min = pcoda -> h[1];
-  pcoda -> h[1] = pcoda -> h[pcoda->count-1];
+  swap(pcoda->h, 1, pcoda->count-1);
   pcoda -> count -= 1;
-  heapify_down(pcoda -> h, 1, pcoda->count);
+  heapify_down(pcoda -> h, 1, pcoda->count-1);
   return min;
 }
 
